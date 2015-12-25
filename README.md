@@ -243,7 +243,7 @@ default["postgresql"]["cfg_update_action"]               = :restart
 #----------------------------------------------------------------------------
 # APT REPOSITORY
 #----------------------------------------------------------------------------
-default["postgresql"]["apt_distribution"]                = node["lsb"]["codename"]
+default["postgresql"]["apt_distribution"]                = node["lsb"] && node["lsb"]["codename"]
 default["postgresql"]["apt_repository"]                  = "apt.postgresql.org"
 default["postgresql"]["apt_uri"]                         = "http://apt.postgresql.org/pub/repos/apt"
 default["postgresql"]["apt_components"]                  = ["main"]
